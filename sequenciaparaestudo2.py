@@ -1051,16 +1051,22 @@ logging.critical('Critical mensage')
 # ao printarmos esses comandos, aparece mensagem apenas de logging.warning para baixo, isso é por conta da configuração padrao do módulo, para
 # mudarmos isso precisamos acessar a configuracao com o comando:
 logging.basicConfig(level=logging.DEBUG,format ='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S',
-filename='logtestepython.log')
+)#filename='logtestepython.log')
 logging.debug('Debug mensage')
 logging.info('Info mensage')
 logging.warning('Warning mensage')
 logging.error('Error mensage')
 logging.critical('Critical mensage')
+"""
 # esses logging são por padrao e podemos editar algumas coisas nele como mostrando no logging.basicConfig() porém tmb podemos criar nosso proprio 
 #logger especifico:
 log = logging.getLogger(__name__) # é uma boa prática você usar a variavel __name__ como nome, assim o logging é criado com o mesmo nome do módulo
 #que vai ser nesse caso: o nome do arquivo q é 'sequenciaparaestudo2', entao imagina um import q precisariamos dar tipo sequenciaparaestudo2.log('msg')
 #eu vou criar esse log em outro arquivo:
-
+"""
+import createlog
+# do jeito que está agora ele assim que é importado ele já da um primeiro logger, para remover isso basta colocar a propriedade no nosso arquivo:
+#var.propagate = False
+#existe tmb o manipulador (handler) que dá para usar no log para que certas msgs se direcionem para algum lugar especifico, verificar esse estudo
+#na pasta 'createlog.py'
 
