@@ -1,2 +1,0 @@
-print('Ratomanocu')
-print('brincadeira')
